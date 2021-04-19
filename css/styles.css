@@ -54,6 +54,10 @@ h2 {
   padding-bottom: 15px;
   padding-top: 25px;
 }
+br {
+  margin-left: 300px;
+  margin-right: 300px;
+}
 
 /*PROJECT REFERENCES*/
 #references {
@@ -129,92 +133,6 @@ svg {
   font-weight: lighter;
   font-size: 8px;
   color: #2a2b2b;
-}
-
-/* TOOLTIP HOVER*/
-.tiphigh:hover {
-  fill: #3ec0c4;
-}
-
-/* TOOLTIP*/
-#tooltip {
-  position: absolute;
-  width: 90px;
-  height: 40px;
-  padding: 10px;
-  text-align: center;
-  font-family: "Public Sans", sans-serif;
-  font-size: 10px;
-  font-weight: medium;
-  color: #2a2b2b;
-  background: #d9d5cf;
-  border: thin;
-  border-radius: 2px;
-  border-color: #2a2b2b;
-  border-width: 1px;
-}
-
-/*TYPOGRAPHY*/
-p {
-  font-family: "Public Sans", sans-serif;
-  font-size: 15px;
-  line-height: 2.2em;
-  letter-spacing: 0.01em;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-h1 {
-  font-family: "Public Sans", sans-serif;
-  font-size: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-h2 {
-  font-family: "Public Sans", sans-serif;
-  font-size: 18px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-/*PROJECT REFERENCES*/
-#references {
-  padding: 20px;
-  list-style: disc;
-  position: relative;
-  width: 1280px;
-  line-height: 35px;
-  list-style-position: inside;
-  text-align: left;
-  font-family: "Public Sans", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 16px;
-  color: #000000;
-}
-
-/*PAGE FOOTER*/
-#footer {
-  position: fixed;
-  display: block;
-  left: 20px;
-  bottom: 20px;
-  height: 2.5em;
-  text-align: left;
-  font-family: "Public Sans", sans-serif;
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 0.5em;
-  color: rgba(0, 0, 0, 1);
-}
-
-/*RESPONSIVE SCREENS*/
-@media (min-width: 1000px) {
-  .calparent {
-    display: flex;
-  }
 }
 
 /* TOOLTIP HOVER*/
