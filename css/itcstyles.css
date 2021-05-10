@@ -1,0 +1,247 @@
+/**** PAGE WIDE ITEMS ****/
+/* IMPORT PUBLIC SANS FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap");
+
+/* CREATE CSS GRID */
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.1fr;
+  grid-template-areas:
+    "logo navtable navtable"
+    "pagenav pageitem"
+    "footer pageitem";
+  grid-gap: 0.5em;
+}
+
+/* PROJECT LOGO */
+#logo {
+  grid-area: logo;
+  /*margin-top: 0.5em;*/
+  margin-bottom: 50px;
+  position: fixed;
+  float: left;
+  justify-self: left;
+  /*padding-right: 20px;
+    padding-bottom: 50px;*/
+}
+
+/* PROJECT PAGE NAV BAR */
+#navtable {
+  grid-area: navtable;
+  position: absolute;
+  font-family: "Public Sans", sans-serif;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: rgba(3, 31, 42, 1);
+  /*color: #fff;*/
+  margin-left: 300px;
+  margin-right: auto;
+  justify-self: right;
+  align-self: center;
+}
+
+#navtable li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+/* FOR PAGES WITH SECONDARY NAV */
+#pagenav {
+  /*may or maynot need*/
+  grid-area: pagenav;
+  position: fixed;
+  float: left;
+  margin-top: 150px;
+  margin-left: 50px;
+  justify-self: left;
+  /*align-self: center;*/
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+}
+
+/* MAIN PAGE ITEM */
+#pageitem {
+  grid-area: pageitem;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: auto;
+}
+
+body {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(227, 224, 221, 1);
+  font-family: "Public Sans", sans-serif;
+}
+
+/* PAGE FOOTER */
+#footer {
+  grid-area: footer;
+  position: fixed;
+  display: inline-block;
+  left: 20px;
+  bottom: 20px;
+  height: 2.5em;
+  text-align: left;
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 0.5em;
+  color: rgba(3, 31, 42, 1);
+}
+
+/**** IMAGES & SVGS ****/
+img {
+  /*max-width: 100%;*/
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+svg {
+  width: 1200px;
+  height: 3400px;
+  margin-left: 125 px;
+  margin-right: auto;
+  display: inline-block;
+  align-items: center;
+}
+
+/**** TYPOGRAPHY ****/
+p {
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  line-height: 2.2em;
+  letter-spacing: 0.01em;
+  margin-left: auto;
+  margin-right: 300px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-family: "Public Sans", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 70 px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
+
+h2 {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+  padding-top: 25px;
+}
+br {
+  font-family: "Public Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  margin-left: 300px;
+  margin-right: auto;
+  line-height: normal;
+  padding-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(181, 138, 56, 1);
+}
+
+a:hover {
+  text-decoration: underline dotted;
+}
+
+a:visited {
+  color: rgba(181, 138, 56, 1);
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+}
+
+/**** ITC CHART PAGE ****/
+/* CHART*/
+/* #chart {
+  margin-left: 300px;
+  margin-right: 300px;
+} */
+
+/*CHART LEGEND*/
+/*.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+/*.description div {
+  display: flex;
+  margin: 15px;
+  text-align: center;
+  justify-content: center;
+  margin: 5px 10px;
+}
+
+/**** INTERACTIVITY ****/
+/*TOOLTIP*/
+/*tooltip highlight*/
+.circles:hover {
+  fill: #bd8d5c;
+}
+
+#tooltip {
+  position: absolute;
+  width: 500px;
+  height: 520px;
+  padding: 2px;
+  text-align: left;
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: normal;
+  color: #031f2a;
+  background: #d8aa89;
+  border-radius: 8px;
+  border: 1px solid #031f2a;
+  display: none;
+}
+
+/****RESPONSIVE SCREENS****/
+@media (min-width: 600px) {
+  /* MOBILE LAYOUT */
+  main {
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "navtable"
+      "pagenav"
+      "pageitem"
+      "pageitem"
+      "footer";
+  }
+}

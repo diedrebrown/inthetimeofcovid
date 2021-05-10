@@ -1,45 +1,162 @@
 <!DOCTYPE html>
-<!--THIS IS HEADER REQUIRED BEGIN-->
+<!--REQUIRED PAGE HEADERS BEGIN-->
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>In the Time of COVID</title>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/itcstyles.css">
 </head>
 
 <body>
     <div id="logo">
-        <a href="index.html"><img src="graphics/logo.png" alt="logo"></a>
+        <a href="index.html"><img src="graphics/logo.png" alt="project logo"></a>
     </div>
-    <div id="navtable">
+    <nav id="navtable">
         <ul>
-            <li><a href="index.html">ABOUT</a></li>
-            <li><a href="background.html">BACKGROUND</a></li>
-            <li><a href="methods.html">METHODS</a></li>
+            <li><a href="index.html">INTRO</a></li>
             <li><a href="data.html">DATA</a></li>
             <li><a href="discussion.html">DISCUSSION</a></li>
             <li><a href="references.html">REFERENCES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
-    </div>
+    </nav>
 
-
-    <!--THIS IS HEADER REQUIRED END-->
-    <h1>Discussion</h1>
-
-
-    <!--FOOTER-->
-    <div id="footer">
-        <div id="_Diedre_Brown_2021">
-            <span>© Diedre Brown 2021</span>
+    <!--REQUIRED PAGE HEADERS END-->
+    <main>
+        <div id="pagenav">
+            <!--Make links to areas on the page-->
+            <ul>
+                <li><a href="#navtable">Menu</a></li>
+                <li><a href="#datadet">Discussion</a></li>
+                <li><a href="#age">Participant Age</a></li>
+                <li><a href="#sex">Participant Sex</a></li>
+                <li><a href="#location">Location of Memory</a></li>
+                <li><a href="#themes">Color, Themes, and Sentiment</a></li>
+                <li><a href="#conclu">Concluding Thoughts</a></li>
+            </ul>
         </div>
-    </div>
+        <div id="pageitem">
+            <div id="datadet">
+                <h1>Discussion</h1>
+                <p>A total of 25 people were recruited via postings on mailing lists through Pratt Institute and
+                    other professional organizations I belong to, social media (Instagram and Twitter), word of
+                    mouth, and flyers posted in my neighborhood. Of these recruits, 14 people participated and
+                    confidentially volunteered their memories in the survey.</p>
+            </div>
+            <div id="age">
+                <h2>Participant Age</h2>
+                <p><img src="graphics/age-dist.svg"><br>
+                    The majority of the study's participants (N=11, 78.6%) were between the ages of 25-40 years old. The
+                    rest of the participants fell into two groups: one representative of the 18-24 year olds (N=1,
+                    7.14%), and two (N=2, 14.29%) representatives of the 41-50 year old demographic.
+                </p>
+            </div>
+            <div id="sex">
+                <h2>Participant Sex</h2>
+                <p><img src="graphics/dist-sex.svg"><br>
+                    That the majority of the participants (N=11, 78.6%) were female is not surprising for a study of
+                    this kind. <a
+                        href="https://www.nytimes.com/interactive/2021/02/04/parenting/working-moms-coronavirus.html?referrer=masthead">Recent
+                        news articles</a> have been devoted to the fact that women have struggled the most
+                    during the pandemic.
+                </p>
+            </div>
+            <div id="Location of Memory">
+                <h2>Location of Memory</h2>
+                <p><img src="graphics/loc-dist.svg"><br>
+                    Thought most (N=11, 78.6%) of the participants were located in the United States at the time of
+                    their COVID-era memory, I was surprised to see the global reach an appeal of the study. The both the
+                    Canadian and Filipino participants found out about this study through my Instagram account.
+                </p>
+            </div>
+            <div id="themes">
+                <h2>Color, Themes, and Sentiment</h2>
+                <div>
+                    <h2>What color hue was most popular?</h2>
+                    <p>Though none of the participants responded to having any known form of color deficiency, the most
+                        selected hue by these participants (N=4, 28.6%) were shades of red, consisting of <em
+                            style="color:#CC0000">#CC0000</em> and <em style="color:#660000">#660000</em>. This hue
+                        represented both positive and negative sentiments. <em style="color:#CC0000">#CC0000</em> was
+                        the
+                        most popular and selected by three (N=3, 21.4%) participants who each recalled the shade with
+                        positive themes of fun, inspiration, and enlightenment. While
+                        <em style="color:#660000">#660000</em> was selected by one
+                        (N=1, 7.1%) participant who described the shade as representing a negative themes of disbelief
+                        and confusion.<br>
+                        <img src="graphics/popcolors.svg"><br>
+                        Interestingly, the second most selected hue among the particpants (N=2, 14.3%) were shades of
+                        blue,
+                        consisting of <em style="color:#0066FF">#0066FF</em> and <em style="color:#000066">#000066</em>.
+                        Though often this hue represents calm, liberty, and royality (Pastoureau, 2018), this survey
+                        found that blue
+                        represented negative sentiments
+                        and themes of fear and anxiety. It is also interesting to note that <a
+                            href="https://www.pantone.com/articles/color-of-the-year/color-of-the-year-2020">Pantone's
+                            color of the year
+                            for 2020</a> was <em style="color:#0066FF">"Classic Blue" #004680</em>. For 2020 perhaps,
+                        this color
+                        prediction/trend setting was a harbinger of bad tidings.
+                    </p>
+                </div>
+                <div>
+                    <h2>Themes and Sentiment</h2>
+                    <p>
+                        <br><img src="graphics/sentiment.svg"><br>
+                    </p>
+                </div>
+
+            </div>
+            <div id="conclu">
+                <h2>Concluding Thoughts</h2>
+                <p>While this project was not able to draw solid conculsions, as a prototype, this project presents
+                    a means of gathering and assessing qualitative information which may not be readily apparent in
+                    traditional quantitative charts, such as a time-series line chart. The interpretation of qualitative
+                    data is usually left to the researcher through inferences, lab studies, and field studies
+                    (Holtzblatt and Jones, 1993).</p>
+                <p>Though based on an
+                    individual’s experience, long-term memory is an ally to one's comprehension of data visualizations
+                    because it is how one develops pattern recognition, general cognitive processing, and the
+                    rationalization of information (Knaflic, 2015).By examining the ways in which we encode emotional
+                    and experiential
+                    information (i.e. sentiment) through an aesthetical aspect like color, we start to examine the ways
+                    in which one individual is both unqiue and may possess similarties to another. The time of COVID has
+                    not only been a period of great loss of life, but also loss of cultural tradtions and ways of life,
+                    and to mark and remember this period with only points in a time-series chart is to diminish the
+                    significance of what it is to be human.</p>
+                <p>While far from perfect, the study highlights one of many ways in which qualitative data can be used
+                    to enhance the information provided by quantitative data. In particular, this method of data
+                    collection, analysis, and visualization combined with quantitative data represents a way to move
+                    beyond numbers and statistics. And in some respects, like Maya Lin's Vietnam Veterans War Memorial
+                    and Jer Thorp's 9/11 Memorial: Name Placement Algorithm, this visualization gives a virtual memorial
+                    to the lives of these fourteen individuals. In making these visualizations, I found that what is
+                    missing from them is the same thing that has been missing from our lives during the time of
+                    COVID-19--physical presence. Moving forward, I would like to figure out a way to transform this
+                    project into a physical object.</p>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div id="footer">
+            <!--FOOTER-->
+            <div id="_Diedre_Brown_2021">
+                <span>© Diedre Brown 2021</span>
+            </div>
+        </div>
+
+    </main>
+
 </body>
 
 </html>

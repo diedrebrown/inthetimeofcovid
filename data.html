@@ -1,59 +1,132 @@
 <!DOCTYPE html>
-<!--THIS IS HEADER REQUIRED BEGIN-->
+<!--REQUIRED PAGE HEADERS BEGIN-->
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <title>In the Time of COVID</title>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="js/index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/itcstyles.css">
 </head>
 
 <body>
     <div id="logo">
-        <a href="index.html"><img src="graphics/logo.png" alt="logo"></a>
+        <a href="index.html"><img src="graphics/logo.png" alt="project logo"></a>
     </div>
-    <div id="navtable">
+    <nav id="navtable">
         <ul>
-            <li><a href="index.html">ABOUT</a></li>
-            <li><a href="background.html">BACKGROUND</a></li>
-            <li><a href="methods.html">METHODS</a></li>
+            <li><a href="index.html">INTRO</a></li>
             <li><a href="data.html">DATA</a></li>
             <li><a href="discussion.html">DISCUSSION</a></li>
             <li><a href="references.html">REFERENCES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
-    </div>
+    </nav>
 
-
-    <!--THIS IS HEADER REQUIRED END-->
-    <h1>The Data</h1>
-    <h2 style="color:firebrick">SHOW THE COVID DATA SERIES FOR 1/22/20 - 3/30/21</h2>
-    <img src="images/studyconf.png"><br>
-    <img src="images/us-diff.png"><br>
-    <img src="images/can-diff.png"><br>
-    <img src="images/phil-diff.png"><br>
-    <p>
-        <img src="images/2020-memoriesbysex.png"><br>
-        <img src="images/2020-memoriesbysex2.png"><br>
-        <img src="images/2020-memoriesbyage.png"><br>
-        <img src="images/2020-memoriesbycity.png"><br>
-        <img src="images/2020-memoriesbylength.png"><br>
-        <img src="images/2020-memoriesbycolor.png"><br>
-        <img src="images/featurecorr.png"><br>
-    </p>
-
-
-    <!--FOOTER-->
-    <div id="footer">
-        <div id="_Diedre_Brown_2021">
-            <span>© Diedre Brown 2021</span>
+    <!--REQUIRED PAGE HEADERS END-->
+    <main>
+        <div id="pagenav">
+            <!--Make links to areas on the page-->
+            <ul>
+                <li><a href="#navtable">Menu</a></li>
+                <li><a href="#legend">Legend</a></li>
+                <li><a href="#chart">Chart</a></li>
+                <li><a href="discussion.html">Data Exploration</a></li>
+            </ul>
         </div>
-    </div>
+        <div id="pageitem">
+            <!--Chart Title, Description, and Data Source-->
+            <div id="legend">
+                <h1>In the Time of COVID January 2020 - March 2021</h1>
+                <p>
+                    <img src="graphics/itoc-chartkey.svg" height=286px><br>
+                    This prototype
+                    visualization prototype
+                    uses shapes and color to illustrate the meaningful experiences of individuals who confidentially
+                    volunteered their
+                    memories from the COVID-19 era (January 2020 - March 2021). Reading across from left to right
+                    then
+                    top to bottom, each date within this period is represented as a SARS-CoV-2 glycoprotein. Dates
+                    (SARS-CoV-2 glycoproteins) filled with color depict a color that the
+                    participant selected as beign representative of their COVID-era memory. The dots
+                    located within the glycoprotein represent the occurrence of an historical COVID-related event. And
+                    the total number of confirmed global cases and global deaths for each date is located below the
+                    glycoprotein. Hover
+                    over the
+                    shapes to learn more about what happened on that date.<br>
+                    Data on COVID events from <a href="https://en.wikipedia.org/wiki/2020">Wikipedia</a>. Data on global
+                    confirmed cases and deaths from the <a href="https://github.com/CSSEGISandData/COVID-19">COVID-19
+                        Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins
+                        University</a>Data of
+                    COVID-era
+                    memories sourced through online survey. Read more about the data and its contributors <a
+                        href="data.html">here.</a>
+                </p>
+
+            </div>
+            <div id="chart">
+                <!--The Tooltip-->
+                <div id="tooltip">
+                    <!--MAKE A DIV FOR EACH TOOLTIP FEATURE-->
+                    <div class="coviddate">
+                        <span></span>
+                        <br>
+                    </div>
+                    <div class="covidcases">
+                        <u>Total Global Cases:</u> <span></span>
+                        <br>
+                    </div>
+                    <div class="coviddeaths">
+                        <u>Total Global Deaths:</u> <span></span>
+                        <br>
+                    </div>
+                    <div class="covidhist">
+                        <u>History:</u> <span></span>
+                        <br>
+                    </div>
+                    <div class="memloc">
+                        <u>Memory Location:</u> <span></span>
+                    </div>
+                    <div class="memory">
+                        <u>Memory:</u> <span></span>
+                    </div>
+                    <div class="memcolor">
+                        <u>Color:</u> <span></span>
+                    </div>
+                    <div class="words">
+                        <u>Color:</u> <span></span>
+                    </div>
+                    <div class="sentiment">
+                        <u>Sentiment:</u>
+                        <span></span>
+                    </div>
+                </div>
+                <!--The Chart-->
+                <svg width="1200" height="3600" align="middle">
+                    <g class="chart" transform="translate(50,0)">
+                        <g class="date" />
+                        <g class="chist" />
+                    </g>
+                </svg>
+
+
+
+
+            </div>
+            <div id="footer">
+                <!--FOOTER-->
+                <div id="_Diedre_Brown_2021">
+                    <span>© Diedre Brown 2021</span>
+                </div>
+            </div>
+
+    </main>
+
 </body>
 
 </html>
