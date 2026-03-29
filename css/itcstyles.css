@@ -96,7 +96,10 @@ body {
 
 /**** IMAGES & SVGS ****/
 img {
-  /*max-width: 100%;*/
+  max-width: 100%;
+  /* UNCOMMENTED - was disabled */
+  height: auto;
+  /* ADDED */
   justify-content: center;
   align-items: center;
   margin-left: auto;
@@ -105,12 +108,15 @@ img {
 }
 
 svg {
-  width: 1200px;
-  height: 3400px;
-  margin-left: 125 px;
+  width: 100%;
+  /* CHANGED from 1200px */
+  max-width: 1200px;
+  /* ADDED - caps it on large screens */
+  height: auto;
+  /* CHANGED from 3400px */
+  margin-left: auto;
   margin-right: auto;
-  display: inline-block;
-  align-items: center;
+  display: block;
 }
 
 /**** TYPOGRAPHY ****/
@@ -231,17 +237,69 @@ li {
 }
 
 /****RESPONSIVE SCREENS****/
-@media (min-width: 600px) {
-  /* MOBILE LAYOUT */
+/* MOBILE - screens 768px wide or less */
+@media (max-width: 768px) {
+
+  /* CHANGED from min-width to max-width */
   main {
     display: flex;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "logo"
-      "navtable"
-      "pagenav"
-      "pageitem"
-      "pageitem"
-      "footer";
+    flex-direction: column;
+    /* ADDED - stacks everything vertically */
+  }
+
+  #logo {
+    position: relative;
+    /* CHANGED from fixed */
+    margin-bottom: 10px;
+  }
+
+  #navtable {
+    position: relative;
+    /* CHANGED from absolute */
+    margin-left: 0;
+    /* REMOVES the 300px left margin */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #navtable li {
+    display: block;
+    /* STACKS nav links vertically */
+    padding: 0.5em 0;
+  }
+
+  #pagenav {
+    position: relative;
+    /* CHANGED from fixed */
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  #pageitem {
+    margin-left: 0;
+    /* REMOVES the 300px left margin */
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  p {
+    margin-right: 0;
+    /* REMOVES the 300px right margin */
+  }
+
+  #footer {
+    position: relative;
+    /* CHANGED from fixed */
+    left: 0;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  iframe {
+    width: 100% !important;
+    /* OVERRIDES the hardcoded width="900" in HTML */
+    height: 400px;
   }
 }
